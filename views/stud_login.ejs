@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+</head>
+<body>
+    <%- include("header") -%>
+    <form action="/stud_access"method="post"class="w-50 mx-auto">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="text"name="Email"class="form-control" 
+          id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text"></div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Name</label>
+          <input type="text"name="Name"class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Phone no.</label>
+            <input type="text"name="Phno" class="form-control" id="exampleInputPassword1">
+          </div>
+        <button type="submit" class="btn btn-dark"style="margin-left:80%">Submit</button>
+      </form>
+    <%- include("footer") -%>
+</body>
+</html>

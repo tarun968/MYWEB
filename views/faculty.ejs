@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <%- include("header") -%>
+    <div class="bg-dark alert alert-dark w-75 mx-auto text-center" role="alert">
+        <p style="font-size: 3ex;"class="text-light">Logged in as <%= GF %>    </p>
+      </div>
+    <form method="post"action="/fac_fbk"class="w-25 mx-auto">
+        <button class="my-2 mx-auto w-100 btn btn-lg btn-dark" type="submit">See Your Feedbacks</button>
+    </form>
+    <form method="post"action="/fac_subjects"class="mx-auto w-25">
+        <button class="my-2 mx-auto w-100 btn btn-lg btn-dark" type="submit">See Your Subjects</button>
+    </form>
+    <%- include("footer") -%>
+</body>
+</html>

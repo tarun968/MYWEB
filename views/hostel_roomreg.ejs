@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel</title>
+</head>
+<body>
+    <%- include("header") -%>
+    <div class="bg-dark alert alert-dark w-75 mx-auto text-center" role="alert">
+        <p style="font-size: 3ex;"class="text-light">Logged in as <%= GS %>    </p>
+      </div>
+    <center>
+        <button type="submit" class="btn btn-dark my-4">Choose Your Room</button>
+      </center>
+    <form method="post"action="/room_save"class="w-25 mx-auto">  
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Room number</label>
+            <input type="text"name="rooms"class="form-control" 
+            id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text"></div>
+          </div>
+      <center>
+        <button type="submit" class="btn btn-dark mt-4">Submit</button>
+      </center>
+    </form>
+    <%- include("footer") -%>
+</body>
+</html>

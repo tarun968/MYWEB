@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include("header") -%>
+    <form method="post"action="/student_login"class="w-25 mx-auto">
+        <button class="my-2 mx-auto w-100 btn btn-lg btn-dark" type="submit">Student</button>
+    </form>
+    <form method="post"action="/faculty"class="mx-auto w-25">
+        <button class="my-2 mx-auto w-100 btn btn-lg btn-dark" type="submit">Faculty</button>
+        </form>
+        
+    <form method="post"action="admin"class="mx-auto w-25">
+        <button class="mt-2 mx-auto w-100 btn btn-lg btn-dark" type="submit">Admin</button>
+        </form>
+        
+    <%- include("footer") -%>
+</body>
+</html>

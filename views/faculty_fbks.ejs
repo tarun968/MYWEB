@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+    <link 
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;700&family=Oswald&family=Roboto+Serif:wght@200&family=Ubuntu:wght@300&display=swap" 
+    rel="stylesheet"
+    >
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;700&family=Oswald&family=Playfair+Display:ital@1&family=Raleway:ital,wght@1,100&family=Roboto+Serif:wght@200&family=Ubuntu:wght@300&display=swap"
+     rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald&family=Raleway:ital,wght@1,100&family=Roboto+Serif:wght@200&family=Ubuntu:wght@300&display=swap" 
+    rel="stylesheet">
+</head>
+<body>
+    <%- include("header") -%>
+    <% fbks.forEach(function(fac_fbk){ %>
+    <div class="row w-50 mx-auto">
+      <div class="col">   
+        <div class="card flex-md-row mb-4 box-shadow h-md-250">
+          <div class="card-body d-flex flex-column align-items-start">
+            <strong class="d-inline-block mb-2 text-success"><%= fac_fbk.Name %></strong>
+            <h3 class="mb-0">
+              <a class="text-dark" href="#">  <%= fac_fbk.Id %></a>
+            </h3>
+            <div class="mb-1 text-muted">Feedbacks Below</div>
+            <% for (let i=0;i<fac_fbk.Feedbacks.length;i++){ %>
+            <p class="card-text mb-auto">
+              <li>
+                <%=fac_fbk.Feedbacks[i].substring(0,60)%>
+              </li>  
+            </p>
+            <% } %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% }) %>   
+    <%- include("footer") -%>
+</body>
+</html>

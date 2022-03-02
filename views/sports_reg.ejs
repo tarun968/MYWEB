@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+    <link 
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;700&family=Oswald&family=Roboto+Serif:wght@200&family=Ubuntu:wght@300&display=swap" 
+    rel="stylesheet"
+    >
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;700&family=Oswald&family=Playfair+Display:ital@1&family=Raleway:ital,wght@1,100&family=Roboto+Serif:wght@200&family=Ubuntu:wght@300&display=swap"
+     rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald&family=Raleway:ital,wght@1,100&family=Roboto+Serif:wght@200&family=Ubuntu:wght@300&display=swap" 
+    rel="stylesheet">
+</head>
+<body>
+    <%- include("header") -%>
+    <div class="bg-dark alert alert-dark w-75 mx-auto text-center" role="alert">
+        <p style="font-size: 3ex;"class="text-light">Logged in as <%= GS %>    </p>
+      </div>
+    <center>
+        <button type="submit" class="btn btn-dark my-4">Choose Your Sports</button>
+      </center>
+    <form method="post"action="/sports_save"class="w-25 mx-auto">
+        <select name="sports"class="form-select">
+            <option selected>Open this select menu</option>
+            <option value="Cricket">Cricket</option>
+            <option value="Football">Football</option>
+            <option value="Tennis">Tennis</option>
+            <option value="Badminton">Badminton</option>
+            <option value="Basketball">Basketball</option>
+          </select>
+      <center>
+        <button type="submit" class="btn btn-dark mt-4">Submit</button>
+      </center>
+    </form>
+    <%- include("footer") -%>
+</body>
+</html>
