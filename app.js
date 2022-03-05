@@ -10,6 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 mongoose.connect("mongodb+srv://taRun_968:TarunTHELT%4023@cluster0.qlzfq.mongodb.net/Feedback", { useNewUrlParser: true });
 //mongodb://localhost:27017
+
 var global_stud;
 var global_fac;
 
@@ -42,8 +43,6 @@ const teacher_rec = mongoose.model("teachrec",teacher_schema);
 const room_rec = mongoose.model("roomrec",room_schema);
 app.use(express.static(staticPath));
 
-
-room_rec.insertMany
 app.get("/",function(req,res){
   res.render("login")
 });
